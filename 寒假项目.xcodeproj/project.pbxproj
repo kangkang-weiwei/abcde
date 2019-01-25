@@ -7,6 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8402985221F769FC00BDE243 /* TableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8402985121F769FC00BDE243 /* TableViewCell.m */; };
+		8402985521F77E6300BDE243 /* MoveView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8402985421F77E6300BDE243 /* MoveView.m */; };
+		8402985821F7862700BDE243 /* Part1_TableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8402985721F7862700BDE243 /* Part1_TableViewCell.m */; };
+		8402985B21F7863E00BDE243 /* Part2_TableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8402985A21F7863E00BDE243 /* Part2_TableViewCell.m */; };
+		8402985E21F7864D00BDE243 /* Part3_TableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8402985D21F7864D00BDE243 /* Part3_TableViewCell.m */; };
+		8404C23221F314400070D11C /* YModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8404C23121F314400070D11C /* YModel.m */; };
+		8404C23521F314540070D11C /* YView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8404C23421F314540070D11C /* YView.m */; };
+		8404C23A21F325220070D11C /* 0.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 8404C23921F325220070D11C /* 0.jpeg */; };
+		8404C23E21F325530070D11C /* 6.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 8404C23D21F325530070D11C /* 6.jpeg */; };
+		8404C24021F325580070D11C /* 5.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 8404C23F21F325580070D11C /* 5.jpeg */; };
+		8404C24221F3255E0070D11C /* 4.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 8404C24121F3255E0070D11C /* 4.jpeg */; };
+		8404C24421F325620070D11C /* 3.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 8404C24321F325620070D11C /* 3.jpeg */; };
+		8404C24621F325660070D11C /* 2.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 8404C24521F325660070D11C /* 2.jpeg */; };
+		8404C24821F3256B0070D11C /* 1.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 8404C24721F3256B0070D11C /* 1.jpeg */; };
 		845FCBFE21F1A2C700449278 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 845FCBFD21F1A2C700449278 /* AppDelegate.m */; };
 		845FCC0121F1A2C700449278 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 845FCC0021F1A2C700449278 /* ViewController.m */; };
 		845FCC0421F1A2C700449278 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 845FCC0221F1A2C700449278 /* Main.storyboard */; };
@@ -15,6 +29,11 @@
 		845FCC0C21F1A2CE00449278 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 845FCC0B21F1A2CE00449278 /* main.m */; };
 		845FCC1621F1A2CE00449278 /* ____Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 845FCC1521F1A2CE00449278 /* ____Tests.m */; };
 		845FCC2121F1A2CE00449278 /* ____UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 845FCC2021F1A2CE00449278 /* ____UITests.m */; };
+		84B1BBB121F4557E002499A2 /* JModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B1BBB021F4557E002499A2 /* JModel.m */; };
+		84EBA59121F8E58700DC60C9 /* voice.png in Resources */ = {isa = PBXBuildFile; fileRef = 84EBA59021F8E58600DC60C9 /* voice.png */; };
+		84EBA59321F8E59900DC60C9 /* collection1.png in Resources */ = {isa = PBXBuildFile; fileRef = 84EBA59221F8E59900DC60C9 /* collection1.png */; };
+		84EBA59521F8E5B200DC60C9 /* collection2.png in Resources */ = {isa = PBXBuildFile; fileRef = 84EBA59421F8E5B200DC60C9 /* collection2.png */; };
+		B782E1B891C5BC5672EED0A1 /* libPods-寒假项目.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 11A02AC4963925E40F38F62A /* libPods-寒假项目.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +54,30 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		11A02AC4963925E40F38F62A /* libPods-寒假项目.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-寒假项目.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5120EEC414618F5A533B3DBD /* Pods-寒假项目.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-寒假项目.debug.xcconfig"; path = "Pods/Target Support Files/Pods-寒假项目/Pods-寒假项目.debug.xcconfig"; sourceTree = "<group>"; };
+		7C177E265BF4B7D42CCE5218 /* Pods-寒假项目.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-寒假项目.release.xcconfig"; path = "Pods/Target Support Files/Pods-寒假项目/Pods-寒假项目.release.xcconfig"; sourceTree = "<group>"; };
+		8402985021F769FC00BDE243 /* TableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TableViewCell.h; sourceTree = "<group>"; };
+		8402985121F769FC00BDE243 /* TableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TableViewCell.m; sourceTree = "<group>"; };
+		8402985321F77E6300BDE243 /* MoveView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MoveView.h; sourceTree = "<group>"; };
+		8402985421F77E6300BDE243 /* MoveView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MoveView.m; sourceTree = "<group>"; };
+		8402985621F7862700BDE243 /* Part1_TableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Part1_TableViewCell.h; sourceTree = "<group>"; };
+		8402985721F7862700BDE243 /* Part1_TableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Part1_TableViewCell.m; sourceTree = "<group>"; };
+		8402985921F7863E00BDE243 /* Part2_TableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Part2_TableViewCell.h; sourceTree = "<group>"; };
+		8402985A21F7863E00BDE243 /* Part2_TableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Part2_TableViewCell.m; sourceTree = "<group>"; };
+		8402985C21F7864D00BDE243 /* Part3_TableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Part3_TableViewCell.h; sourceTree = "<group>"; };
+		8402985D21F7864D00BDE243 /* Part3_TableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Part3_TableViewCell.m; sourceTree = "<group>"; };
+		8404C23021F314400070D11C /* YModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YModel.h; sourceTree = "<group>"; };
+		8404C23121F314400070D11C /* YModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YModel.m; sourceTree = "<group>"; };
+		8404C23321F314540070D11C /* YView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YView.h; sourceTree = "<group>"; };
+		8404C23421F314540070D11C /* YView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YView.m; sourceTree = "<group>"; };
+		8404C23921F325220070D11C /* 0.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 0.jpeg; sourceTree = SOURCE_ROOT; };
+		8404C23D21F325530070D11C /* 6.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 6.jpeg; sourceTree = SOURCE_ROOT; };
+		8404C23F21F325580070D11C /* 5.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 5.jpeg; sourceTree = SOURCE_ROOT; };
+		8404C24121F3255E0070D11C /* 4.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 4.jpeg; sourceTree = SOURCE_ROOT; };
+		8404C24321F325620070D11C /* 3.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 3.jpeg; sourceTree = SOURCE_ROOT; };
+		8404C24521F325660070D11C /* 2.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 2.jpeg; sourceTree = SOURCE_ROOT; };
+		8404C24721F3256B0070D11C /* 1.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1.jpeg; sourceTree = SOURCE_ROOT; };
 		845FCBF921F1A2C700449278 /* 寒假项目.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "寒假项目.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		845FCBFC21F1A2C700449278 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		845FCBFD21F1A2C700449278 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -51,6 +94,11 @@
 		845FCC1C21F1A2CE00449278 /* 寒假项目UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "寒假项目UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		845FCC2021F1A2CE00449278 /* ____UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "____UITests.m"; sourceTree = "<group>"; };
 		845FCC2221F1A2CE00449278 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84B1BBAF21F4557E002499A2 /* JModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JModel.h; sourceTree = "<group>"; };
+		84B1BBB021F4557E002499A2 /* JModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JModel.m; sourceTree = "<group>"; };
+		84EBA59021F8E58600DC60C9 /* voice.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = voice.png; sourceTree = "<group>"; };
+		84EBA59221F8E59900DC60C9 /* collection1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = collection1.png; sourceTree = "<group>"; };
+		84EBA59421F8E5B200DC60C9 /* collection2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = collection2.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +106,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B782E1B891C5BC5672EED0A1 /* libPods-寒假项目.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,13 +127,80 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6EB2A06A5A61423AAAB00AA3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				11A02AC4963925E40F38F62A /* libPods-寒假项目.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8402984D21F7696800BDE243 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8404C23021F314400070D11C /* YModel.h */,
+				8404C23121F314400070D11C /* YModel.m */,
+				84B1BBAF21F4557E002499A2 /* JModel.h */,
+				84B1BBB021F4557E002499A2 /* JModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8402984E21F7698D00BDE243 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8404C23321F314540070D11C /* YView.h */,
+				8404C23421F314540070D11C /* YView.m */,
+				8402985321F77E6300BDE243 /* MoveView.h */,
+				8402985421F77E6300BDE243 /* MoveView.m */,
+				8402985021F769FC00BDE243 /* TableViewCell.h */,
+				8402985121F769FC00BDE243 /* TableViewCell.m */,
+				8402985621F7862700BDE243 /* Part1_TableViewCell.h */,
+				8402985721F7862700BDE243 /* Part1_TableViewCell.m */,
+				8402985921F7863E00BDE243 /* Part2_TableViewCell.h */,
+				8402985A21F7863E00BDE243 /* Part2_TableViewCell.m */,
+				8402985C21F7864D00BDE243 /* Part3_TableViewCell.h */,
+				8402985D21F7864D00BDE243 /* Part3_TableViewCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8402984F21F769A500BDE243 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				845FCBFF21F1A2C700449278 /* ViewController.h */,
+				845FCC0021F1A2C700449278 /* ViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		8404C23621F324B60070D11C /* picture */ = {
+			isa = PBXGroup;
+			children = (
+				8404C23921F325220070D11C /* 0.jpeg */,
+				8404C24721F3256B0070D11C /* 1.jpeg */,
+				8404C24521F325660070D11C /* 2.jpeg */,
+				8404C24321F325620070D11C /* 3.jpeg */,
+				8404C24121F3255E0070D11C /* 4.jpeg */,
+				8404C23F21F325580070D11C /* 5.jpeg */,
+				8404C23D21F325530070D11C /* 6.jpeg */,
+				84EBA59021F8E58600DC60C9 /* voice.png */,
+				84EBA59221F8E59900DC60C9 /* collection1.png */,
+				84EBA59421F8E5B200DC60C9 /* collection2.png */,
+			);
+			path = picture;
+			sourceTree = "<group>";
+		};
 		845FCBF021F1A2C700449278 = {
 			isa = PBXGroup;
 			children = (
+				8404C23621F324B60070D11C /* picture */,
 				845FCBFB21F1A2C700449278 /* 寒假项目 */,
 				845FCC1421F1A2CE00449278 /* 寒假项目Tests */,
 				845FCC1F21F1A2CE00449278 /* 寒假项目UITests */,
 				845FCBFA21F1A2C700449278 /* Products */,
+				9A2F5786B3FB2DC9E84216F7 /* Pods */,
+				6EB2A06A5A61423AAAB00AA3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -103,8 +219,9 @@
 			children = (
 				845FCBFC21F1A2C700449278 /* AppDelegate.h */,
 				845FCBFD21F1A2C700449278 /* AppDelegate.m */,
-				845FCBFF21F1A2C700449278 /* ViewController.h */,
-				845FCC0021F1A2C700449278 /* ViewController.m */,
+				8402984D21F7696800BDE243 /* Model */,
+				8402984E21F7698D00BDE243 /* View */,
+				8402984F21F769A500BDE243 /* Controller */,
 				845FCC0221F1A2C700449278 /* Main.storyboard */,
 				845FCC0521F1A2CE00449278 /* Assets.xcassets */,
 				845FCC0721F1A2CE00449278 /* LaunchScreen.storyboard */,
@@ -132,6 +249,15 @@
 			path = "寒假项目UITests";
 			sourceTree = "<group>";
 		};
+		9A2F5786B3FB2DC9E84216F7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5120EEC414618F5A533B3DBD /* Pods-寒假项目.debug.xcconfig */,
+				7C177E265BF4B7D42CCE5218 /* Pods-寒假项目.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -139,6 +265,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 845FCC2521F1A2CE00449278 /* Build configuration list for PBXNativeTarget "寒假项目" */;
 			buildPhases = (
+				A913798F410C777632D9AA5E /* [CP] Check Pods Manifest.lock */,
 				845FCBF521F1A2C700449278 /* Sources */,
 				845FCBF621F1A2C700449278 /* Frameworks */,
 				845FCBF721F1A2C700449278 /* Resources */,
@@ -235,7 +362,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8404C23A21F325220070D11C /* 0.jpeg in Resources */,
 				845FCC0921F1A2CE00449278 /* LaunchScreen.storyboard in Resources */,
+				8404C24221F3255E0070D11C /* 4.jpeg in Resources */,
+				8404C24421F325620070D11C /* 3.jpeg in Resources */,
+				84EBA59321F8E59900DC60C9 /* collection1.png in Resources */,
+				8404C24021F325580070D11C /* 5.jpeg in Resources */,
+				8404C24621F325660070D11C /* 2.jpeg in Resources */,
+				8404C24821F3256B0070D11C /* 1.jpeg in Resources */,
+				84EBA59521F8E5B200DC60C9 /* collection2.png in Resources */,
+				84EBA59121F8E58700DC60C9 /* voice.png in Resources */,
+				8404C23E21F325530070D11C /* 6.jpeg in Resources */,
 				845FCC0621F1A2CE00449278 /* Assets.xcassets in Resources */,
 				845FCC0421F1A2C700449278 /* Main.storyboard in Resources */,
 			);
@@ -257,14 +394,43 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		A913798F410C777632D9AA5E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-寒假项目-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		845FCBF521F1A2C700449278 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8402985221F769FC00BDE243 /* TableViewCell.m in Sources */,
+				8402985E21F7864D00BDE243 /* Part3_TableViewCell.m in Sources */,
 				845FCC0121F1A2C700449278 /* ViewController.m in Sources */,
+				8404C23221F314400070D11C /* YModel.m in Sources */,
+				8404C23521F314540070D11C /* YView.m in Sources */,
 				845FCC0C21F1A2CE00449278 /* main.m in Sources */,
+				8402985821F7862700BDE243 /* Part1_TableViewCell.m in Sources */,
+				84B1BBB121F4557E002499A2 /* JModel.m in Sources */,
 				845FCBFE21F1A2C700449278 /* AppDelegate.m in Sources */,
+				8402985521F77E6300BDE243 /* MoveView.m in Sources */,
+				8402985B21F7863E00BDE243 /* Part2_TableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -431,6 +597,7 @@
 		};
 		845FCC2621F1A2CE00449278 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5120EEC414618F5A533B3DBD /* Pods-寒假项目.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -447,6 +614,7 @@
 		};
 		845FCC2721F1A2CE00449278 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7C177E265BF4B7D42CCE5218 /* Pods-寒假项目.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
