@@ -8,6 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol Part1_TableViewCellDelegate <NSObject>
+
+-(void)clickTest:(NSString *)tag;
+
+@end
+
 @interface Part1_TableViewCell : UITableViewCell
 
 @property(nonatomic , strong)UILabel *queryLabel;
@@ -18,5 +24,8 @@
 @property(nonatomic , strong)UIButton *collectionButton;
 @property(nonatomic , strong)UIButton *voiceButton;
 @property(nonatomic , strong)UILabel *explainsLabel;
+
+@property(nonatomic , strong)NSString *ID;
+@property(nonatomic , assign)id<Part1_TableViewCellDelegate> delegate;
 
 @end

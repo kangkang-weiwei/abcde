@@ -29,10 +29,13 @@
 		845FCC0C21F1A2CE00449278 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 845FCC0B21F1A2CE00449278 /* main.m */; };
 		845FCC1621F1A2CE00449278 /* ____Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 845FCC1521F1A2CE00449278 /* ____Tests.m */; };
 		845FCC2121F1A2CE00449278 /* ____UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 845FCC2021F1A2CE00449278 /* ____UITests.m */; };
+		84A65A24221461B500A161B7 /* YWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A65A23221461B500A161B7 /* YWebView.m */; };
+		84A65A26221471A100A161B7 /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = 84A65A25221471A100A161B7 /* back.png */; };
 		84B1BBB121F4557E002499A2 /* JModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B1BBB021F4557E002499A2 /* JModel.m */; };
+		84B27A2F22007D3A007F3069 /* YSegleHand.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B27A2E22007D3A007F3069 /* YSegleHand.m */; };
 		84EBA59121F8E58700DC60C9 /* voice.png in Resources */ = {isa = PBXBuildFile; fileRef = 84EBA59021F8E58600DC60C9 /* voice.png */; };
 		84EBA59321F8E59900DC60C9 /* collection1.png in Resources */ = {isa = PBXBuildFile; fileRef = 84EBA59221F8E59900DC60C9 /* collection1.png */; };
-		84EBA59521F8E5B200DC60C9 /* collection2.png in Resources */ = {isa = PBXBuildFile; fileRef = 84EBA59421F8E5B200DC60C9 /* collection2.png */; };
+		84EBA59521F8E5B200DC60C9 /* collection0.png in Resources */ = {isa = PBXBuildFile; fileRef = 84EBA59421F8E5B200DC60C9 /* collection0.png */; };
 		B782E1B891C5BC5672EED0A1 /* libPods-寒假项目.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 11A02AC4963925E40F38F62A /* libPods-寒假项目.a */; };
 /* End PBXBuildFile section */
 
@@ -94,11 +97,16 @@
 		845FCC1C21F1A2CE00449278 /* 寒假项目UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "寒假项目UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		845FCC2021F1A2CE00449278 /* ____UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "____UITests.m"; sourceTree = "<group>"; };
 		845FCC2221F1A2CE00449278 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84A65A22221461B500A161B7 /* YWebView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YWebView.h; sourceTree = "<group>"; };
+		84A65A23221461B500A161B7 /* YWebView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YWebView.m; sourceTree = "<group>"; };
+		84A65A25221471A100A161B7 /* back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back.png; sourceTree = "<group>"; };
 		84B1BBAF21F4557E002499A2 /* JModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JModel.h; sourceTree = "<group>"; };
 		84B1BBB021F4557E002499A2 /* JModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JModel.m; sourceTree = "<group>"; };
+		84B27A2D22007D3A007F3069 /* YSegleHand.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YSegleHand.h; sourceTree = "<group>"; };
+		84B27A2E22007D3A007F3069 /* YSegleHand.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YSegleHand.m; sourceTree = "<group>"; };
 		84EBA59021F8E58600DC60C9 /* voice.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = voice.png; sourceTree = "<group>"; };
 		84EBA59221F8E59900DC60C9 /* collection1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = collection1.png; sourceTree = "<group>"; };
-		84EBA59421F8E5B200DC60C9 /* collection2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = collection2.png; sourceTree = "<group>"; };
+		84EBA59421F8E5B200DC60C9 /* collection0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = collection0.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +148,8 @@
 			children = (
 				8404C23021F314400070D11C /* YModel.h */,
 				8404C23121F314400070D11C /* YModel.m */,
+				84B27A2D22007D3A007F3069 /* YSegleHand.h */,
+				84B27A2E22007D3A007F3069 /* YSegleHand.m */,
 				84B1BBAF21F4557E002499A2 /* JModel.h */,
 				84B1BBB021F4557E002499A2 /* JModel.m */,
 			);
@@ -153,6 +163,8 @@
 				8404C23421F314540070D11C /* YView.m */,
 				8402985321F77E6300BDE243 /* MoveView.h */,
 				8402985421F77E6300BDE243 /* MoveView.m */,
+				84A65A22221461B500A161B7 /* YWebView.h */,
+				84A65A23221461B500A161B7 /* YWebView.m */,
 				8402985021F769FC00BDE243 /* TableViewCell.h */,
 				8402985121F769FC00BDE243 /* TableViewCell.m */,
 				8402985621F7862700BDE243 /* Part1_TableViewCell.h */,
@@ -185,8 +197,9 @@
 				8404C23F21F325580070D11C /* 5.jpeg */,
 				8404C23D21F325530070D11C /* 6.jpeg */,
 				84EBA59021F8E58600DC60C9 /* voice.png */,
+				84A65A25221471A100A161B7 /* back.png */,
 				84EBA59221F8E59900DC60C9 /* collection1.png */,
-				84EBA59421F8E5B200DC60C9 /* collection2.png */,
+				84EBA59421F8E5B200DC60C9 /* collection0.png */,
 			);
 			path = picture;
 			sourceTree = "<group>";
@@ -366,11 +379,12 @@
 				845FCC0921F1A2CE00449278 /* LaunchScreen.storyboard in Resources */,
 				8404C24221F3255E0070D11C /* 4.jpeg in Resources */,
 				8404C24421F325620070D11C /* 3.jpeg in Resources */,
+				84A65A26221471A100A161B7 /* back.png in Resources */,
 				84EBA59321F8E59900DC60C9 /* collection1.png in Resources */,
 				8404C24021F325580070D11C /* 5.jpeg in Resources */,
 				8404C24621F325660070D11C /* 2.jpeg in Resources */,
 				8404C24821F3256B0070D11C /* 1.jpeg in Resources */,
-				84EBA59521F8E5B200DC60C9 /* collection2.png in Resources */,
+				84EBA59521F8E5B200DC60C9 /* collection0.png in Resources */,
 				84EBA59121F8E58700DC60C9 /* voice.png in Resources */,
 				8404C23E21F325530070D11C /* 6.jpeg in Resources */,
 				845FCC0621F1A2CE00449278 /* Assets.xcassets in Resources */,
@@ -424,9 +438,11 @@
 				8402985E21F7864D00BDE243 /* Part3_TableViewCell.m in Sources */,
 				845FCC0121F1A2C700449278 /* ViewController.m in Sources */,
 				8404C23221F314400070D11C /* YModel.m in Sources */,
+				84A65A24221461B500A161B7 /* YWebView.m in Sources */,
 				8404C23521F314540070D11C /* YView.m in Sources */,
 				845FCC0C21F1A2CE00449278 /* main.m in Sources */,
 				8402985821F7862700BDE243 /* Part1_TableViewCell.m in Sources */,
+				84B27A2F22007D3A007F3069 /* YSegleHand.m in Sources */,
 				84B1BBB121F4557E002499A2 /* JModel.m in Sources */,
 				845FCBFE21F1A2C700449278 /* AppDelegate.m in Sources */,
 				8402985521F77E6300BDE243 /* MoveView.m in Sources */,

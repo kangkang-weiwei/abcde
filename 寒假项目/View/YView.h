@@ -12,7 +12,5 @@
 
 @property(nonatomic , strong)UITableView *tableView;
 @property(nonatomic , strong)UISearchBar *searchBar;
-@property(nonatomic , strong)UIButton *exchangeButton;
-@property(nonatomic , strong)UIButton *cancelButton;
 
 @end

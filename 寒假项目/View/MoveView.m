@@ -7,6 +7,7 @@
 //
 
 #import "MoveView.h"
+#import "Masonry.h"
 
 @implementation MoveView
 
@@ -14,7 +15,12 @@
     if (self = [super initWithFrame:frame]) {
         _longTableView = [[UITableView alloc]init];
         [self addSubview:_longTableView];
-        _longTableView.frame = CGRectMake(0, 0, self.frame.size.width, self.frame.size.height);
+        [_longTableView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.left.equalTo(self.mas_left);
+            make.right.equalTo(self.mas_right);
+            make.top.equalTo(self.mas_top);
+            make.bottom.equalTo(self.mas_bottom);
+        }];
         _longTableView.tag = 101;
     }
     return self;

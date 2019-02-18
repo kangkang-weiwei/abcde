@@ -8,9 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
+typedef void(^WebSelect)(UIButton *webButtonTest);
+
 @interface Part2_TableViewCell : UITableViewCell
 
-@property(nonatomic , strong)UILabel *testLabel;
+@property(nonatomic , copy)WebSelect webclick;
+
 @property(nonatomic , strong)NSMutableArray *labelArray;
+@property(nonatomic , strong)UIButton *webButton;
 
 @end
