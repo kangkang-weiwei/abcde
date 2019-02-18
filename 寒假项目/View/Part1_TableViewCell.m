@@ -36,38 +36,37 @@
         
         _explainsLabel = [[UILabel alloc]init];
         [self.contentView addSubview:_explainsLabel];
+        
+        _ID = [[NSString alloc]init];
+        _ID = @"123456789";
     }
     return self;
 }
 -(void)layoutSubviews{
-    CGFloat height = self.frame.size.height/5;
-    //    CGFloat weight = self.frame.size.width;
-    
     [self.queryLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self);
-        make.left.equalTo(self);
+        make.left.equalTo(self).offset(10);
         make.right.equalTo(self->_voiceButton.mas_left);
-        make.height.mas_equalTo(height);
     }];
-    _queryLabel.backgroundColor = [UIColor purpleColor];
-//    _queryLabel.frame = CGRectMake(0, 0, self.frame.size.width, 60);
+    _queryLabel.font = [UIFont systemFontOfSize:35];
     
     [self.voiceButton mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self);
         make.left.equalTo(self->_queryLabel.mas_right);
         make.height.mas_equalTo(self->_queryLabel.mas_height);
     }];
-    _voiceButton.backgroundColor = [UIColor yellowColor];
+//    _voiceButton.backgroundColor = [UIColor yellowColor];
     [_voiceButton setImage:[UIImage imageNamed:@"voice.png"] forState:UIControlStateNormal];
     
     [self.collectionButton mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self);
-        make.left.equalTo(self->_voiceButton.mas_right);
+        make.left.equalTo(self->_voiceButton.mas_right).offset(10);
         make.height.mas_equalTo(self->_queryLabel.mas_height);
-        make.right.equalTo(self);
+        make.right.equalTo(self).offset(-10);
     }];
-    _collectionButton.backgroundColor = [UIColor blueColor];
-    [_collectionButton setImage:[UIImage imageNamed:@"collection1.png"] forState:UIControlStateNormal];
+//    _collectionButton.backgroundColor = [UIColor blueColor];
+//    [_collectionButton setImage:[UIImage imageNamed:@"collection1.png"] forState:UIControlStateNormal];
+    [_collectionButton addTarget:self action:@selector(click) forControlEvents:UIControlEventTouchUpInside];
     
     [self.phoneticLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.mas_equalTo(self->_queryLabel.mas_bottom);
@@ -75,8 +74,7 @@
         make.height.mas_equalTo(self->_queryLabel.mas_height);
         make.right.equalTo(self->_translationLabel.mas_left);
     }];
-    _phoneticLabel.backgroundColor = [UIColor greenColor];
-    _phoneticLabel.text = @"666666";
+    _phoneticLabel.font = [UIFont systemFontOfSize:25];
     
     [self.translationLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.mas_equalTo(self->_queryLabel.mas_bottom);
@@ -84,24 +82,33 @@
         make.height.mas_equalTo(self->_queryLabel.mas_height);
         make.right.equalTo(self);
     }];
-    _translationLabel.backgroundColor = [UIColor redColor];
+    _translationLabel.font = [UIFont systemFontOfSize:25];
     
     [self.exam_typeLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.mas_equalTo(self->_phoneticLabel.mas_bottom);
-        make.left.equalTo(self);
+        make.left.equalTo(self).offset(10);
         make.height.mas_equalTo(self->_queryLabel.mas_height);
         make.right.equalTo(self);
     }];
-    _exam_typeLabel.backgroundColor = [UIColor yellowColor];
+    _exam_typeLabel.font = [UIFont systemFontOfSize:25];
     
+    _explainsLabel.numberOfLines = 0;
     [self.explainsLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.mas_equalTo(self->_exam_typeLabel.mas_bottom);
-        make.left.equalTo(self);
+        make.left.equalTo(self).offset(10);
         make.right.equalTo(self);
         make.bottom.mas_equalTo(self);
     }];
-    _explainsLabel.backgroundColor = [UIColor blackColor];
-    
+    _explainsLabel.font = [UIFont systemFontOfSize:25];
+}
+
+-(void)click{
+    if ([self.delegate respondsToSelector:@selector(clickTest:)]) {
+        [self.delegate clickTest:_ID];
+        NSLog(@"%@",_ID);
+    }else{
+        NSLog(@"未响应");
+    }
 }
 
 - (void)awakeFromNib {
