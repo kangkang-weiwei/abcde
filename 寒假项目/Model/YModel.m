@@ -111,19 +111,14 @@
 //        NSLog(@"success--%@--%@--%@",[responseObject class],responseObject,responseObject[@"basic"][@"exam_type"]);
         
         NSString *string = responseObject[@"errorCode"];
-        if (![string isEqualToString:@"0"]) {
+        NSDictionary *basic = [[NSDictionary alloc]init];
+        if (![string isEqualToString:@"0"] || [responseObject[@"basic"] isEqual: [NSNull null]]) {
             self->_allDataDic = @{@"error":string};
             if (showTheView) {
                 [self changeName:self->_allDataDic];
             }
         }else{
-          
-        NSDictionary *basic = [[NSDictionary alloc]init];
-        if (responseObject[@"basic"] == [NSNull null]) {
-            basic = nil;
-        }else{
             basic = responseObject[@"basic"];
-        }
         NSString *exam_type = [[NSString alloc]init];
         if (basic[@"exam_type"] == nil) {
             exam_type = @"四级";

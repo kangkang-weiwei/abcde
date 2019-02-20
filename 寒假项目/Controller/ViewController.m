@@ -7,7 +7,7 @@
 //
 //mainCell,输入allow没有翻译部分
 //输入错误时，会显示之前的view//
-//输入表情时，应判断，否则贻笑大方
+//输入表情时，应判断，否则贻笑大方//
 
 #import "ViewController.h"
 #import "YView.h"
@@ -97,7 +97,7 @@
     
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(allDataFromModel:) name:@"allData" object:nil];
     
-    alert = [[UIAlertView alloc]initWithTitle:@"警告" message:@"输入错误， 请重新输入" delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+    alert = [[UIAlertView alloc]initWithTitle:@"警告" message:@"本词条未收入， 请重新输入" delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
     alert.alertViewStyle = UIAlertViewStyleDefault;
 }
 -(void)clearHistory{
