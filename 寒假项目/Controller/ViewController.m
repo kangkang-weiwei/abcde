@@ -7,12 +7,15 @@
 //
 //mainCell,输入allow没有翻译部分
 //输入错误时，会显示之前的view//
-<<<<<<< HEAD
 //输入表情时，应判断，否则贻笑大方//
-=======
-//输入表情时，应判断，否则贻笑大方
->>>>>>> eea4f106b3af06418a410bdcba936a7a26c8ae91
 
+/*enum EOCConnectionState {
+    EOCConnectionStateDisconnected,
+    EOCConnectionStateConnecting,
+    EOCConnectionStateConnected,
+};
+typedef enum EOCConnectionState EOCConnectionStating;
+EOCConnectionStating state = EOCConnectionStateDisconnected;*/
 #import "ViewController.h"
 #import "YView.h"
 #import "Masonry.h"
@@ -47,6 +50,14 @@
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
+    NSMutableArray *mutableArray;
+    [mutableArray replaceObjectAtIndex:1 withObject:@"dog"];
+    NSMutableDictionary *mutableDic;
+    [mutableDic setObject:@"Galloway" forKey:@"lastName"];
+    
+    mutableArray[1] = @"dog";
+    mutableDic[@"lastName"] = @"Galloway";
+    
     newDict = [[NSDictionary alloc]init];
     heightArray = [NSMutableArray array];
     historyArray = [NSMutableArray array];
@@ -101,11 +112,7 @@
     
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(allDataFromModel:) name:@"allData" object:nil];
     
-<<<<<<< HEAD
     alert = [[UIAlertView alloc]initWithTitle:@"警告" message:@"本词条未收入， 请重新输入" delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
-=======
-    alert = [[UIAlertView alloc]initWithTitle:@"警告" message:@"输入错误， 请重新输入" delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
->>>>>>> eea4f106b3af06418a410bdcba936a7a26c8ae91
     alert.alertViewStyle = UIAlertViewStyleDefault;
 }
 -(void)clearHistory{
