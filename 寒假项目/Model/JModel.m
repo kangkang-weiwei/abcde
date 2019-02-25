@@ -9,6 +9,6 @@
 #import "JModel.h"
 
 //@implementation JModel
-
 @implementation AllJson
+
 @end

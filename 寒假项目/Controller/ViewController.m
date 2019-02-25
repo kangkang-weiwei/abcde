@@ -48,10 +48,7 @@ EOCConnectionStating state = EOCConnectionStateDisconnected;*/
     NSDictionary *simpleDic;
     NSMutableArray *mainCellArray;
 }
-//@synthesize <#property#>
 - (void)viewDidLoad {
-    
-    
     [super viewDidLoad];
     NSMutableArray *mutableArray;
     [mutableArray replaceObjectAtIndex:1 withObject:@"dog"];
