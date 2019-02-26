@@ -120,6 +120,8 @@ EOCConnectionStating state = EOCConnectionStateDisconnected;*/
     [seg deleteMainCellTable];
     mainCellArray = [seg getMainCellTable];
     [mainView.tableView reloadData];
+    
+    //@throw [NSException exceptionWithName:NSInternalInconsistencyException reason:@"Must use initWithWidth: andHeight: instead." userInfo:nil];//抛出警告
 }
 -(void)scrollViewDidScroll:(UIScrollView *)scrollView{
     [self.view endEditing:YES];
