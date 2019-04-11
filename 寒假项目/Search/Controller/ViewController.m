@@ -50,6 +50,9 @@ EOCConnectionStating state = EOCConnectionStateDisconnected;*/
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.navigationItem.title = @"Search";
+    
     NSMutableArray *mutableArray;
     [mutableArray replaceObjectAtIndex:1 withObject:@"dog"];
     NSMutableDictionary *mutableDic;
@@ -88,7 +91,7 @@ EOCConnectionStating state = EOCConnectionStateDisconnected;*/
     [self.view addSubview:moveView];
     [self.view addSubview:webView];
     [mainView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self.view).with.offset(20);
+        make.top.equalTo(self.view).with.offset(64);
         make.right.equalTo(self.view);
         make.left.equalTo(self.view);
         make.bottom.equalTo(self.view);
@@ -134,6 +137,9 @@ EOCConnectionStating state = EOCConnectionStateDisconnected;*/
     if (tableView.tag == 2019) {
         TableViewCell *Cell = nil;
         Cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
+        if (Cell == nil) {
+            Cell = [[TableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
+        }
         //存放历史记录
         if (mainCellArray.count) {
             Cell.queryLabel.text = mainCellArray[indexPath.row][@"query"];
@@ -327,7 +333,7 @@ EOCConnectionStating state = EOCConnectionStateDisconnected;*/
 -(void)moveViewUp{
     if (moveUpDown) {
         [UIView animateWithDuration:0.5 animations:^{
-            self->moveView.frame = CGRectMake(0, 70, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height - 70);
+            self->moveView.frame = CGRectMake(0, 50 + 64, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height - (50 + 64));
         } completion:^(BOOL finished) {
             self->moveUpDown = 0;
         }];

@@ -11,7 +11,6 @@
 		8402985521F77E6300BDE243 /* MoveView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8402985421F77E6300BDE243 /* MoveView.m */; };
 		8402985821F7862700BDE243 /* Part1_TableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8402985721F7862700BDE243 /* Part1_TableViewCell.m */; };
 		8402985B21F7863E00BDE243 /* Part2_TableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8402985A21F7863E00BDE243 /* Part2_TableViewCell.m */; };
-		8402985E21F7864D00BDE243 /* Part3_TableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8402985D21F7864D00BDE243 /* Part3_TableViewCell.m */; };
 		8404C23221F314400070D11C /* YModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8404C23121F314400070D11C /* YModel.m */; };
 		8404C23521F314540070D11C /* YView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8404C23421F314540070D11C /* YView.m */; };
 		8404C23A21F325220070D11C /* 0.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 8404C23921F325220070D11C /* 0.jpeg */; };
@@ -31,11 +30,13 @@
 		845FCC2121F1A2CE00449278 /* ____UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 845FCC2021F1A2CE00449278 /* ____UITests.m */; };
 		84A65A24221461B500A161B7 /* YWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A65A23221461B500A161B7 /* YWebView.m */; };
 		84A65A26221471A100A161B7 /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = 84A65A25221471A100A161B7 /* back.png */; };
-		84B1BBB121F4557E002499A2 /* JModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B1BBB021F4557E002499A2 /* JModel.m */; };
 		84B27A2F22007D3A007F3069 /* YSegleHand.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B27A2E22007D3A007F3069 /* YSegleHand.m */; };
 		84EBA59121F8E58700DC60C9 /* voice.png in Resources */ = {isa = PBXBuildFile; fileRef = 84EBA59021F8E58600DC60C9 /* voice.png */; };
 		84EBA59321F8E59900DC60C9 /* collection1.png in Resources */ = {isa = PBXBuildFile; fileRef = 84EBA59221F8E59900DC60C9 /* collection1.png */; };
 		84EBA59521F8E5B200DC60C9 /* collection0.png in Resources */ = {isa = PBXBuildFile; fileRef = 84EBA59421F8E5B200DC60C9 /* collection0.png */; };
+		84FB71CC225E248400C741EB /* DJSSentenceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84FB71CB225E248400C741EB /* DJSSentenceViewController.m */; };
+		84FB71CF225E24AD00C741EB /* DJSSentenceModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 84FB71CE225E24AD00C741EB /* DJSSentenceModel.m */; };
+		84FB71D2225E24C500C741EB /* DJSSentenceView.m in Sources */ = {isa = PBXBuildFile; fileRef = 84FB71D1225E24C500C741EB /* DJSSentenceView.m */; };
 		B782E1B891C5BC5672EED0A1 /* libPods-寒假项目.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 11A02AC4963925E40F38F62A /* libPods-寒假项目.a */; };
 /* End PBXBuildFile section */
 
@@ -68,8 +69,6 @@
 		8402985721F7862700BDE243 /* Part1_TableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Part1_TableViewCell.m; sourceTree = "<group>"; };
 		8402985921F7863E00BDE243 /* Part2_TableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Part2_TableViewCell.h; sourceTree = "<group>"; };
 		8402985A21F7863E00BDE243 /* Part2_TableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Part2_TableViewCell.m; sourceTree = "<group>"; };
-		8402985C21F7864D00BDE243 /* Part3_TableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Part3_TableViewCell.h; sourceTree = "<group>"; };
-		8402985D21F7864D00BDE243 /* Part3_TableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Part3_TableViewCell.m; sourceTree = "<group>"; };
 		8404C23021F314400070D11C /* YModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YModel.h; sourceTree = "<group>"; };
 		8404C23121F314400070D11C /* YModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YModel.m; sourceTree = "<group>"; };
 		8404C23321F314540070D11C /* YView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YView.h; sourceTree = "<group>"; };
@@ -100,13 +99,17 @@
 		84A65A22221461B500A161B7 /* YWebView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YWebView.h; sourceTree = "<group>"; };
 		84A65A23221461B500A161B7 /* YWebView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YWebView.m; sourceTree = "<group>"; };
 		84A65A25221471A100A161B7 /* back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back.png; sourceTree = "<group>"; };
-		84B1BBAF21F4557E002499A2 /* JModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JModel.h; sourceTree = "<group>"; };
-		84B1BBB021F4557E002499A2 /* JModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JModel.m; sourceTree = "<group>"; };
 		84B27A2D22007D3A007F3069 /* YSegleHand.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YSegleHand.h; sourceTree = "<group>"; };
 		84B27A2E22007D3A007F3069 /* YSegleHand.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YSegleHand.m; sourceTree = "<group>"; };
 		84EBA59021F8E58600DC60C9 /* voice.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = voice.png; sourceTree = "<group>"; };
 		84EBA59221F8E59900DC60C9 /* collection1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = collection1.png; sourceTree = "<group>"; };
 		84EBA59421F8E5B200DC60C9 /* collection0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = collection0.png; sourceTree = "<group>"; };
+		84FB71CA225E248400C741EB /* DJSSentenceViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DJSSentenceViewController.h; sourceTree = "<group>"; };
+		84FB71CB225E248400C741EB /* DJSSentenceViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DJSSentenceViewController.m; sourceTree = "<group>"; };
+		84FB71CD225E24AD00C741EB /* DJSSentenceModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DJSSentenceModel.h; sourceTree = "<group>"; };
+		84FB71CE225E24AD00C741EB /* DJSSentenceModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DJSSentenceModel.m; sourceTree = "<group>"; };
+		84FB71D0225E24C500C741EB /* DJSSentenceView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DJSSentenceView.h; sourceTree = "<group>"; };
+		84FB71D1225E24C500C741EB /* DJSSentenceView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DJSSentenceView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,8 +153,6 @@
 				8404C23121F314400070D11C /* YModel.m */,
 				84B27A2D22007D3A007F3069 /* YSegleHand.h */,
 				84B27A2E22007D3A007F3069 /* YSegleHand.m */,
-				84B1BBAF21F4557E002499A2 /* JModel.h */,
-				84B1BBB021F4557E002499A2 /* JModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -171,8 +172,6 @@
 				8402985721F7862700BDE243 /* Part1_TableViewCell.m */,
 				8402985921F7863E00BDE243 /* Part2_TableViewCell.h */,
 				8402985A21F7863E00BDE243 /* Part2_TableViewCell.m */,
-				8402985C21F7864D00BDE243 /* Part3_TableViewCell.h */,
-				8402985D21F7864D00BDE243 /* Part3_TableViewCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -232,9 +231,8 @@
 			children = (
 				845FCBFC21F1A2C700449278 /* AppDelegate.h */,
 				845FCBFD21F1A2C700449278 /* AppDelegate.m */,
-				8402984D21F7696800BDE243 /* Model */,
-				8402984E21F7698D00BDE243 /* View */,
-				8402984F21F769A500BDE243 /* Controller */,
+				84FB71D7225E275E00C741EB /* Sentence */,
+				84FB71D3225E270000C741EB /* Search */,
 				845FCC0221F1A2C700449278 /* Main.storyboard */,
 				845FCC0521F1A2CE00449278 /* Assets.xcassets */,
 				845FCC0721F1A2CE00449278 /* LaunchScreen.storyboard */,
@@ -260,6 +258,53 @@
 				845FCC2221F1A2CE00449278 /* Info.plist */,
 			);
 			path = "寒假项目UITests";
+			sourceTree = "<group>";
+		};
+		84FB71D3225E270000C741EB /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				8402984D21F7696800BDE243 /* Model */,
+				8402984E21F7698D00BDE243 /* View */,
+				8402984F21F769A500BDE243 /* Controller */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		84FB71D4225E271900C741EB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				84FB71CD225E24AD00C741EB /* DJSSentenceModel.h */,
+				84FB71CE225E24AD00C741EB /* DJSSentenceModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		84FB71D5225E272E00C741EB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				84FB71D0225E24C500C741EB /* DJSSentenceView.h */,
+				84FB71D1225E24C500C741EB /* DJSSentenceView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		84FB71D6225E273D00C741EB /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				84FB71CA225E248400C741EB /* DJSSentenceViewController.h */,
+				84FB71CB225E248400C741EB /* DJSSentenceViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		84FB71D7225E275E00C741EB /* Sentence */ = {
+			isa = PBXGroup;
+			children = (
+				84FB71D4225E271900C741EB /* Model */,
+				84FB71D5225E272E00C741EB /* View */,
+				84FB71D6225E273D00C741EB /* Controller */,
+			);
+			path = Sentence;
 			sourceTree = "<group>";
 		};
 		9A2F5786B3FB2DC9E84216F7 /* Pods */ = {
@@ -435,16 +480,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				8402985221F769FC00BDE243 /* TableViewCell.m in Sources */,
-				8402985E21F7864D00BDE243 /* Part3_TableViewCell.m in Sources */,
+				84FB71CF225E24AD00C741EB /* DJSSentenceModel.m in Sources */,
 				845FCC0121F1A2C700449278 /* ViewController.m in Sources */,
 				8404C23221F314400070D11C /* YModel.m in Sources */,
 				84A65A24221461B500A161B7 /* YWebView.m in Sources */,
+				84FB71CC225E248400C741EB /* DJSSentenceViewController.m in Sources */,
 				8404C23521F314540070D11C /* YView.m in Sources */,
 				845FCC0C21F1A2CE00449278 /* main.m in Sources */,
 				8402985821F7862700BDE243 /* Part1_TableViewCell.m in Sources */,
 				84B27A2F22007D3A007F3069 /* YSegleHand.m in Sources */,
-				84B1BBB121F4557E002499A2 /* JModel.m in Sources */,
 				845FCBFE21F1A2C700449278 /* AppDelegate.m in Sources */,
+				84FB71D2225E24C500C741EB /* DJSSentenceView.m in Sources */,
 				8402985521F77E6300BDE243 /* MoveView.m in Sources */,
 				8402985B21F7863E00BDE243 /* Part2_TableViewCell.m in Sources */,
 			);

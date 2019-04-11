@@ -20,6 +20,10 @@
 -(void)changeName:(NSDictionary *)dic{
     self.postSimpleDict = dic;
 }
+-(void)sentence:(NSString *)String{
+    self.sentence = String;
+    NSLog(@"%@",self.sentence);
+}
 //request//q:要翻译的文本////from源语言////to目标语言////salt随机数////appKey应用ID////sign签名md5产生//
 -(void)requestTranslation:(BOOL)translation Text:(NSString *)textString showTheView:(BOOL)showTheView{
     NSString *appKey = @"21b561135fddf97e";
@@ -38,7 +42,6 @@
     NSString *sign = [self getMD5HashWithMessage:String];
     NSString *urlString = [NSString stringWithFormat:@"https://openapi.youdao.com/api?q=%@&from=%@&to=%@&appKey=%@&salt=%@&sign=%@",textString,from,to,appKey,salt,sign];
     NSLog(@"------- %@",urlString);
-//    [self AnalysisJSON:urlString showTheView:showTheView];
     [self testAFGet:urlString showTheView:showTheView];
 }
 -(NSString *)getMD5HashWithMessage:(NSString *)message{
@@ -49,60 +52,6 @@
     return [NSString stringWithFormat:@"%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x",result[0], result[1], result[2], result[3],result[4], result[5], result[6], result[7],result[8], result[9], result[10], result[11],result[12], result[13], result[14], result[15]];
 }
 
-- (void)AnalysisJSON:(NSString *)urlString showTheView:(BOOL)showTheView{
-    urlString = [urlString stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]];
-    NSURLRequest *urlRequest;
-    urlRequest = [NSURLRequest requestWithURL:[NSURL URLWithString:urlString]];
-    NSURLSession *session = [NSURLSession sharedSession];
-    NSURLSessionDataTask *sessionDataTask;
-    sessionDataTask = [session dataTaskWithRequest:urlRequest completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
-        if (error == nil) {
-            id objc = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
-            NSLog(@"---%@",objc);
-            self->_allJson = [[AllJson alloc]initWithDictionary:objc error:nil];
-            NSLog(@"%@",self->_allJson);
-            NSMutableArray *exam_typeArray = [NSMutableArray array];
-            if (self->_allJson.basic[@"exam_type"] != nil) {
-                exam_typeArray = self->_allJson.basic[@"exam_type"];
-            }else{
-                [exam_typeArray addObject:@"四级"];
-                NSLog(@"==%@",exam_typeArray[exam_typeArray.count - 1]);
-            }
-            NSMutableArray *phoneticArray = [NSMutableArray array];
-            if (self->_allJson.basic[@"phonetic"] != nil) {
-                phoneticArray = self->_allJson.basic[@"phonetic"];
-            }else{
-                [phoneticArray addObject:@"无音标"];
-            }
-            NSMutableArray *uk_phoneticArray = [NSMutableArray array];
-            if (self->_allJson.basic[@"uk-phonetic"] != nil) {
-                uk_phoneticArray = self->_allJson.basic[@"uk-phonetic"];
-            }else{
-                [uk_phoneticArray addObject:@"无英式音标"];
-            }
-            NSMutableArray *us_phoneticArray = [NSMutableArray array];
-            if (self->_allJson.basic[@"us-phonetic"] != nil) {
-                us_phoneticArray = self->_allJson.basic[@"uk-phonetic"];
-            }else{
-                [us_phoneticArray addObject:@"无美式音标"];
-            }
-            [[NSOperationQueue mainQueue]addOperationWithBlock:^{
-                NSLog(@"%@--%@--%@--%@",self->_allJson.query,self->_allJson.translation,phoneticArray,exam_typeArray[exam_typeArray.count - 1]);
-                NSDictionary *testDic = @{@"query":self->_allJson.query , @"translation":self->_allJson.translation , @"phonetic":phoneticArray , @"exam_type":exam_typeArray[exam_typeArray.count - 1]};
-                if (showTheView) {
-                    [self changeName:testDic];
-                }
-                NSDictionary *part1 = @{@"query":self->_allJson.query , @"translation":self->_allJson.translation , @"phonetic":phoneticArray , @"uk-phonetic":uk_phoneticArray , @"us-phonetic":us_phoneticArray , @"exam_type":exam_typeArray};
-                NSDictionary *part2 = @{@"explains":self->_allJson.basic[@"explains"]};
-                NSDictionary *part3 = @{@"web":self->_allJson.web , @"webdict":self->_allJson.webdict};
-                self->_allDataDic = @{@"part1":part1 , @"part2":part2 , @"part3":part3};
-//                [[NSNotificationCenter defaultCenter]postNotificationName:@"allData" object:nil userInfo:self->_allDataDic];
-            }];
-        }
-    }];
-    [sessionDataTask resume];
-}
-
 -(void)testAFGet:(NSString *)urlString showTheView:(BOOL)showTheView{
     urlString = [urlString stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]];
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
@@ -111,6 +60,26 @@
 //        NSLog(@"success--%@--%@--%@",[responseObject class],responseObject,responseObject[@"basic"][@"exam_type"]);
         
         NSString *string = responseObject[@"errorCode"];
+        NSLog(@"%@,%i",string,showTheView);
+        if ([string isEqualToString:@"0"] && !showTheView) {
+            NSString *translation = [[NSString alloc]init];
+            if (responseObject[@"translation"] == nil) {
+                translation = @"无翻译";
+            }else{
+                NSMutableArray *transArray = [NSMutableArray array];
+                transArray = responseObject[@"translation"];
+                for (int i = 0; i < transArray.count; i++) {
+                    NSString *string = transArray[i];
+                    translation = [translation stringByAppendingString:string];
+                    NSLog(@"%@",translation);
+                    if (i != transArray.count - 1) {
+                        translation = [translation stringByAppendingFormat:@"，"];
+                    }
+                }
+            }
+            self->_sentence = translation;//Sentence
+            [self sentence:translation];
+        }
 
         NSDictionary *basic = [[NSDictionary alloc]init];
         if (![string isEqualToString:@"0"] || [responseObject[@"basic"] isEqual: [NSNull null]]) {
@@ -231,6 +200,7 @@
         NSNumber *part1Float = [NSNumber numberWithFloat:part1Height];
         NSNumber *part2Float = [NSNumber numberWithFloat:part2Height];
         
+            
         self->_simpleDic = @{@"query":query,@"translation":translation,@"phonetic":phonetic,@"exam_type":exam_type};//tableview显示部分
         
         NSDictionary *part1 = @{@"query":query,@"translation":translation,@"phonetic":phonetic,@"us-phonetic":us_phonetic,@"exam_type":exam_type,@"explains":explains,@"part1":part1Float,@"part2":part2Float};

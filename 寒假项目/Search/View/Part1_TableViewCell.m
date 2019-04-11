@@ -64,8 +64,6 @@
         make.height.mas_equalTo(self->_queryLabel.mas_height);
         make.right.equalTo(self).offset(-10);
     }];
-//    _collectionButton.backgroundColor = [UIColor blueColor];
-//    [_collectionButton setImage:[UIImage imageNamed:@"collection1.png"] forState:UIControlStateNormal];
     [_collectionButton addTarget:self action:@selector(click) forControlEvents:UIControlEventTouchUpInside];
     
     [self.phoneticLabel mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -105,7 +103,7 @@
 -(void)click{
     if ([self.delegate respondsToSelector:@selector(clickTest:)]) {
         [self.delegate clickTest:_ID];
-        NSLog(@"%@",_ID);
+//        NSLog(@"%@",_ID);
     }else{
         NSLog(@"未响应");
     }

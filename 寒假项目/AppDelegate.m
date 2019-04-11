@@ -7,15 +7,35 @@
 //
 
 #import "AppDelegate.h"
+#import "ViewController.h"
+#import "DJSSentenceViewController.h"
 
 @interface AppDelegate ()
 
 @end
 
-@implementation AppDelegate
+@implementation AppDelegate{
+    UINavigationController *nav;
+}
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    UITabBarController *tabBar = [[UITabBarController alloc]init];
+    
+    ViewController *viewController = [[ViewController alloc]init];
+    viewController.tabBarItem.image = [[UIImage imageNamed:@"voice.png"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    UINavigationController *nav1 = [[UINavigationController alloc]initWithRootViewController:viewController];
+    
+    DJSSentenceViewController *sentViewController = [[DJSSentenceViewController alloc]init];
+    sentViewController.tabBarItem.image = [[UIImage imageNamed:@"back.png"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    UINavigationController *nav2 = [[UINavigationController alloc]initWithRootViewController:sentViewController];
+    
+    NSMutableArray *array = [NSMutableArray arrayWithObjects:nav1 , nav2 , nil];
+    tabBar.viewControllers = array;
+    self.window.rootViewController = tabBar;
+    [self.window makeKeyWindow];
+    
+    
     // Override point for customization after application launch.
     return YES;
 }

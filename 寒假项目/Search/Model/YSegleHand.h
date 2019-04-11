@@ -23,4 +23,8 @@
 -(void)deleteMoveCollTable:(NSDictionary *)dic;
 -(BOOL)searchMoveCollTable:(NSString *)query;
 
+-(void)insertIntoSentence:(NSString *)string;
+-(void)deleteSentsnce:(NSString *)string;
+-(NSMutableArray *)getSentence;
+
 @end

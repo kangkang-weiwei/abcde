@@ -33,11 +33,59 @@ YSegleHand *handle = nil;
     if ([fmdb open]) {
         [self addMainCellTable];
         [self addMoveCollectionTable];
+        [self addSentenceTable];
         NSLog(@"数据库打开");
         [fmdb close];
     }else{
         NSLog(@"数据库打开失败---%@",fmdb.lastErrorMessage);
     }
+}
+//创表Sentence
+-(void)addSentenceTable{
+    NSString *sentenceSQL = @"create table if not exists sentenceTable (id integer primary key autoincrement not null, sentence text not null)";
+    BOOL Success = [fmdb executeUpdate:sentenceSQL];
+    if (Success) {
+        NSLog(@"sentence创表成功");
+    }else{
+        NSLog(@"sentence创表失败");
+    }
+}
+//增加一个
+-(void)insertIntoSentence:(NSString *)string{
+    [fmdb open];
+    NSString *SQL = @"insert into sentenceTable (sentence) values(?)";
+    BOOL isAddSuccess = [fmdb executeUpdate:SQL,string];
+    if (isAddSuccess) {
+        NSLog(@"插入信息成功");
+    }else{
+        NSLog(@"插入信息失败");
+    }
+    [fmdb close];
+}
+//删除一个
+-(void)deleteSentsnce:(NSString *)string{
+    [fmdb open];
+    NSString *SQL = @"delete from sentenceTable where sentence = ?";
+    BOOL isSuccess = [fmdb executeUpdate:SQL,string];
+    if (isSuccess) {
+        NSLog(@"删除成功");
+    }else{
+        NSLog(@"删除失败");
+    }
+    [fmdb close];
+}
+//查全部
+-(NSMutableArray *)getSentence{
+    NSMutableArray *allArray = [NSMutableArray array];
+    [fmdb open];
+    FMResultSet *result = [fmdb executeQuery:@"select *from sentenceTable"];
+    while ([result next]) {
+        NSString *wordString = [result stringForColumn:@"sentence"];
+        [allArray addObject:wordString];
+    }
+    [fmdb close];
+    NSLog(@"%@",allArray);
+    return allArray;
 }
 //创表move
 -(void)addMoveCollectionTable{

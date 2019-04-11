@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "JModel.h"
+//#import "JModel.h"
 
 @interface YModel : NSObject
 
@@ -15,7 +15,9 @@
 @property(nonatomic , strong)NSDictionary *allDataDic;
 @property(nonatomic , strong)NSDictionary *simpleDic;
 
-@property(nonatomic , strong)AllJson *allJson;
+@property(nonatomic , strong)NSString *sentence;//sentence的翻译
+
+//@property(nonatomic , strong)AllJson *allJson;
 
 -(void)initWithModel;
 -(void)requestTranslation:(BOOL)translation Text:(NSString *)textString showTheView:(BOOL)showTheView;
